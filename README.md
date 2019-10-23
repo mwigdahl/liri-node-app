@@ -7,10 +7,10 @@ This node application allows you to pull information about movies, songs, and co
 In your bash/shell terminal, you can run `node` `command` `song/movie/artist` to get a result.
 
 The available commands are: 
-`spotify-this-song` and `song name` to get a result with information about the song and way to preview it.
-`movie-this` and `movie name` to get information about the movie.
-`concert-this` and `artist name` to get information about the next upcoming show.
-`do-what-it-says` will run the command that is in the  `random.txt ` file.
+1. `spotify-this-song` and `song name` to get a result with information about the song and way to preview it.
+2. `movie-this` and `movie name` to get information about the movie.
+3. `concert-this` and `artist name` to get information about the next upcoming show.
+4. `do-what-it-says` will run the command that is in the  `random.txt ` file.
 
 ### Technology used
 - Node.js
