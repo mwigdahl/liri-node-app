@@ -30,8 +30,9 @@ switch (action) {
     console.log("You need to enter an action");
 }
 
-function spotifySong() {
-  spotify.search({ type: "track", query: searchResult, limit: 1 }, function(
+function spotifySong(mySearch) {
+  mySearch = searchResult;
+  spotify.search({ type: "track", query: mySearch, limit: 1 }, function(
     err,
     data
   ) {
@@ -115,6 +116,7 @@ function movieThis() {
 }
 
 function doWhatitSays() {
+
   fs.readFile("random.txt", "utf8", function(error, data) {
     if (error) {
       return console.log(error);
@@ -124,8 +126,7 @@ function doWhatitSays() {
 
     var makeItHappen =
       "node " + "liri.js " + fileCommand[0] + " " + fileCommand[1];
-    console.log("make it happen", makeItHappen);
-
-    return makeItHappen;
-  });
+      //console.log("make it happen", makeItHappen);
+      spotifySong(makeItHappen);
+    });
 }
