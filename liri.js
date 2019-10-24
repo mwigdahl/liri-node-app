@@ -9,7 +9,7 @@ var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 
 var action = process.argv[2];
-var searchArray = process.argv.splice(3, process.argv.length - 1);
+var searchArray = process.argv.splice(3);
 var searchResult = searchArray.join("+");
 
 // handles my action choices
@@ -30,9 +30,9 @@ switch (action) {
     console.log("You need to enter an action");
 }
 
-function spotifySong(mySearch) {
-  mySearch = searchResult;
-  spotify.search({ type: "track", query: mySearch, limit: 1 }, function(
+function spotifySong() {
+
+  spotify.search({ type: "track", query: searchResult, limit: 1 }, function(
     err,
     data
   ) {
@@ -46,6 +46,7 @@ function spotifySong(mySearch) {
     console.log("Preview Song: " + data.tracks.items[0].external_urls.spotify);
     console.log("Album Name: " + data.tracks.items[0].album.name);
     console.log("\n-----------------------------\n");
+
   });
 }
 
@@ -124,9 +125,7 @@ function doWhatitSays() {
 
     var fileCommand = data.split(",");
 
-    var makeItHappen =
-      "node " + "liri.js " + fileCommand[0] + " " + fileCommand[1];
-      //console.log("make it happen", makeItHappen);
-      spotifySong(makeItHappen);
+    searchResult = fileCommand[1];
+      spotifySong();
     });
 }

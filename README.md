@@ -18,6 +18,25 @@ The available commands are:
 - APIs: Bands in town - https://manager.bandsintown.com/support/bandsintown-api, OMDB - http://www.omdbapi.com/
 
 
+### Examples
+
+* Look up concert
+
+![gif](/images/concert-this.gif)
+
+* Spotify a Song
+
+![gif](/images/spotify-this-song.gif)
+
+* Look up movie
+
+![gif](/images/movie-this.gif)
+
+* Run the text inside of the Random.txt file
+
+![gif](/images/do-what-it-says.gif)
+
+
 ### Maintainer Information
 * Creator: Matt Wigdahl
 * github: @mwigdahl
